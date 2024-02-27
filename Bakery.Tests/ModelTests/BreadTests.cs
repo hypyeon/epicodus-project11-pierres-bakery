@@ -41,5 +41,24 @@ namespace Bakery.Tests
       int result4 = fourthTest.ApplyDeal();
       Assert.AreEqual(6, result4);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsTotalPriceAfterConsideringDeal_Int()
+    {
+      Bread firstTest = new Bread(6);
+      int expected1 = firstTest.ApplyDeal() * 5;
+      int result1 = firstTest.GetPrice();
+      Assert.AreEqual(expected1, result1);
+
+      Bread secondTest = new Bread(7);
+      int expected2 = secondTest.ApplyDeal() * 5;
+      int result2 = secondTest.GetPrice();
+      Assert.AreEqual(expected2, result2);
+
+      Bread thirdTest = new Bread(5);
+      int expected3 = 20;
+      int result3 = thirdTest.GetPrice();
+      Assert.AreEqual(expected3, result3);
+    }
   }
 }

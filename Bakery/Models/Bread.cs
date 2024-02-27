@@ -29,5 +29,11 @@ namespace Bakery.Models
         }
       }
     }
+
+    public int GetPrice()
+    {
+      int orderAmountWithDeal = ApplyDeal();
+      return orderAmountWithDeal * 5;
+    }
   }
 }
