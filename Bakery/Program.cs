@@ -98,6 +98,7 @@ namespace Bakery
       Console.WriteLine($". . . . . . . . . . . . . . . . . . . . . . ${pastryOrder.GetPrice()}");
       Console.WriteLine("-----------------------------------------------");
       Console.WriteLine($"Total . . . . . . . . . . . . . . . . . . . ${breadOrder.GetPrice() + pastryOrder.GetPrice()}");
+      Console.WriteLine($"You've saved ${breadOrder.GetDiscountedAmount() + pastryOrder.GetDiscountedAmount()} with the deal!");
       Console.WriteLine("-----------------------------------------------");
       Console.WriteLine("Please enter 'ok' to confirm your order. To start a new order, enter 'new'. \nTo exit, enter any key.");
       string response = Console.ReadLine(); 
