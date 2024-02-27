@@ -7,5 +7,10 @@ namespace Bakery.Models
     {
       orderAmount = num;
     }
+
+    public int GetOrderAmount()
+    {
+      return orderAmount;
+    }
   }
 }
