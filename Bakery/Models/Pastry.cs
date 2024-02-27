@@ -34,5 +34,10 @@ namespace Bakery.Models
         }
       }
     }
+
+    public int GetPrice()
+    {
+      return ApplyDeal() * 2;
+    }
   }
 }

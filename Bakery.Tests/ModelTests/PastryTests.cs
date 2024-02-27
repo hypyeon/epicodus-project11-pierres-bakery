@@ -37,5 +37,19 @@ namespace Bakery.Tests
       int result3 = thirdTest.ApplyDeal();
       Assert.AreEqual(6, result3);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsTotalPriceAfterConsideringDeal_Int()
+    {
+      Pastry firstTest = new Pastry(6);
+      int expected1 = firstTest.ApplyDeal() * 2;
+      int result1 = firstTest.GetPrice();
+      Assert.AreEqual(expected1, result1);
+
+      Pastry secondTest = new Pastry(3);
+      int expected2 = secondTest.ApplyDeal() * 2;
+      int result2 = secondTest.GetPrice();
+      Assert.AreEqual(expected2, result2);
+    }
   }
 }
