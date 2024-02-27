@@ -6,6 +6,11 @@ namespace Bakery.Tests
   [TestClass]
   public class BreadTests
   {
-    
+    [TestMethod]
+    public void BreadConstructor_GetsNumberOfLoaves()
+    {
+      Bread newBread = new Bread();
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
+    }
   }
 }
