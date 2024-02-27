@@ -7,8 +7,7 @@ namespace Bakery
   {
     static void Main()
     {
-      Bread bread = new Bread();
-      Pastry pastry = new Pastry();
+      
     }
   }
 }
