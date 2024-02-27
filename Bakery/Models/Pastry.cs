@@ -39,5 +39,10 @@ namespace Bakery.Models
     {
       return ApplyDeal() * 2;
     }
+
+    public int GetDiscountedAmount()
+    {
+      return GetOrderAmount() * 2 - GetPrice();
+    }
   }
 }
