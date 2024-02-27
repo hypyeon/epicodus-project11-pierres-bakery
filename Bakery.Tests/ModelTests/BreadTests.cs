@@ -21,5 +21,25 @@ namespace Bakery.Tests
       int result = newOrder.orderAmount;
       Assert.AreEqual(num, result);
     }
+
+    [TestMethod]
+    public void ApplyDeal_ReturnsNumOfLoavesWhenDealApplied_Int()
+    {
+      Bread firstTest = new Bread(6);
+      int result1 = firstTest.ApplyDeal();
+      Assert.AreEqual(4, result1);
+
+      Bread secondTest = new Bread(7);
+      int result2 = secondTest.ApplyDeal();
+      Assert.AreEqual(5, result2);
+
+      Bread thirdTest = new Bread(4);
+      int result3 = thirdTest.ApplyDeal();
+      Assert.AreEqual(3, result3);
+
+      Bread fourthTest = new Bread(9);
+      int result4 = fourthTest.ApplyDeal();
+      Assert.AreEqual(6, result4);
+    }
   }
 }
