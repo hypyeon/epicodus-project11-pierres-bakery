@@ -2,7 +2,7 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    public int orderAmount { get; }
+    public int orderAmount { get; set; }
     public Bread(int num)
     {
       orderAmount = num;
