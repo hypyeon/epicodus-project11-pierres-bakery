@@ -60,5 +60,19 @@ namespace Bakery.Tests
       int result3 = thirdTest.GetPrice();
       Assert.AreEqual(expected3, result3);
     }
+
+    [TestMethod]
+    public void GetDiscountedAmount_ReturnsDiscountedAmountWithDeal_Int()
+    {
+      Bread firstTest = new Bread(6);
+      int expected1 = firstTest.GetOrderAmount() * 5 - firstTest.GetPrice();
+      int result1 = firstTest.GetDiscountedAmount();
+      Assert.AreEqual(expected1, result1); 
+
+      Bread secondTest = new Bread(3);
+      int expected2 = 5;
+      int result2 = secondTest.GetDiscountedAmount();
+      Assert.AreEqual(expected2, result2); 
+    }
   }
 }
