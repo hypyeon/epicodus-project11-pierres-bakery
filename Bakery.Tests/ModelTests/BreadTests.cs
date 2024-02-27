@@ -7,18 +7,18 @@ namespace Bakery.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void BreadConstructor_GetsPriceOfBreadAfterDiscount_Bread()
+    public void BreadConstructor_DefinesOrderAmountOfBread_Bread()
     {
       Bread newBread = new Bread(5);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
     [TestMethod]
-    public void GetNum_ReturnsNumOfLoavesOrdered_Int()
+    public void GetOrderAmount_ReturnsNumOfLoavesOrdered_Int()
     {
       int num = 5;
       Bread newOrder = new Bread(num);
-      int result = newOrder.orderAmount;
+      int result = newOrder.GetOrderAmount();
       Assert.AreEqual(num, result);
     }
 

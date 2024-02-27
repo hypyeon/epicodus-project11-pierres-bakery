@@ -8,6 +8,11 @@ namespace Bakery.Models
       orderAmount = num;
     }
 
+    public int GetOrderAmount()
+    {
+      return orderAmount;
+    }
+
     public int ApplyDeal()
     {
       if (orderAmount % 3 == 0)
