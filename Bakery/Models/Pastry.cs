@@ -5,7 +5,7 @@ namespace Bakery.Models
     public int orderAmount { get; }
     public Pastry(int num)
     {
-      
+      orderAmount = num;
     }
   }
 }
